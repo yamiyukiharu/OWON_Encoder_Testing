@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QMenu, QAction, QVBoxLayo
 from PyQt5.QtGui import QIcon
  
 from Plots import PlotCanvas
+from usb import usbManager
  
 class App(QWidget):
  
@@ -52,6 +53,8 @@ class App(QWidget):
 		#button.setToolTip('This s an example button')
 		#button.move(500,0)
 		#button.resize(140,100)
+
+		myUsbManager = usbManager()
 
 		self.setLayout(hBox)
 		self.show()
